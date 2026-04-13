@@ -11,12 +11,12 @@
 <section>
     {#if project}
     <div class="row mx-0 mt-sm-5 mt-4 justify-content-center">
-        <div class="col-4 d-sm-block d-none">
+        <div class="col-4 d-lg-block d-none">
             <div class="cover-container" data-aos="zoom-in">
                 <img class="cover" src="{urlFor(project.cover).url()}" alt="">
             </div>
         </div>
-        <div class="col-sm-6 col-11">
+        <div class="col-lg-6 col-11">
             <div class="proyect-desc">
                 <h1 class="" data-aos="fade-right">{project.title}</h1>
                 {#if project.link_git || project.link_site}
@@ -29,9 +29,15 @@
                     {/if}
                 </div>
                 {/if}
-                <p class="mt-4" data-aos="fade-right" data-aos-duration="1400">
+                <p class="mt-4" data-aos="fade-right" data-aos-duration="1700">
                     {project.description[$lang]}
                 </p>
+                <div data-aos="fade-right" data-aos-duration="1700" class="project-tags mt-3 justify-content-lg-start justify-content-center">
+            {#each project.tags as tag}
+            <img class="mb-2 mx-1" src="/images/skills/{tag}.png" alt="{tag}" on:error={(e) => e.currentTarget.src = `/images/skills/${tag}.jpg`} />
+            {/each}
+            
+          </div>
             </div>
         </div>
     </div>
@@ -42,8 +48,8 @@
             <h1 data-aos="zoom-in" class="title-g"><span class="font1">See</span> <span class="cursive1 cursive mx-2">the</span> <span class="highlight-blue">Project</span></h1>
         {/if}
 
-        <div class="mb-4 mt-5 mt-sm-3 project-splide" data-aos="zoom-in">
-            <Splide aria-label="project gallery" options={{type   : 'loop',perPage: 3,focus  : 'center',arrows:false,breakpoints: {623: { perPage: 1}}}}>
+        <div class="mb-4 mt-5 mt-lg-3 project-splide" data-aos="zoom-in">
+            <Splide aria-label="project gallery" options={{type   : 'loop',perPage: 3,focus  : 'center',arrows:false,breakpoints: {623: { perPage: 1},903: { perPage: 1}}}}>
                 {#each project.gallery  as img,i}
                     <SplideSlide>
                         <img class="img-gallery" src="{urlFor(img).url()}" alt="{project.title}{i}"/>
@@ -73,10 +79,11 @@
     .title-g{font-size: 3.6rem;}
     .title-g .highlight-blue{font-weight: 200;}
     .proyect-desc p{font-size: 1.2rem;}
-
+    .project-tags{display: flex; flex-wrap: wrap;}
+    .project-tags img{width: 50px;}
     .img-gallery{max-width: 95%; object-fit: cover; height: 100%; border-radius: 15px;}
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 900px) {
         .proyect-desc h1{text-align: center;}
         .links-d{justify-content: center;}
         .proyect-desc p{text-align: justify;line-height: 1.34;}

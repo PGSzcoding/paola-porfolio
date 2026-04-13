@@ -5,11 +5,11 @@
 </script>
 
 <div class="hero-index row mx-0  my-sm-0 my-5">
-    <div class="col-sm-4 col-11">
+    <div class="col-md-7 col-lg-4 col-11">
         <img data-aos="fade-up-right" class="hero-image" src="/images/girlComputer.png" alt="hero-ima">
     </div>
 
-    <div class="col-sm-4 offset-sm-1 col-11">
+    <div class="col-lg-4 col-md-11 offset-lg-1 col-11">
      <div class="title font1 mb-4" data-aos="flip-up" data-aos-duration="1100">
      <h1><span class="highlight-yellow"><i>{$lang=='es'?hero.title?.es:hero.title?.en}</i> </span></h1>
         <!--
@@ -35,7 +35,7 @@
     .title h1:first-child{margin-bottom: .3em;}
     .title h1:nth-of-type(2){margin-bottom: .7em;}
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 850px) {
         .title{ left: initial;width: max-content;}
         .title h1{width: auto; font-size: 3rem;}
         .hero-index{flex-direction: column-reverse;}

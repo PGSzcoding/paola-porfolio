@@ -31,7 +31,7 @@
              <h1 data-aos="zoom-in" class="contact-title font1 mt-5">{$lang=='es'?'PONTE':'GET'} <span class="cursive1">{$lang=='es'?'en':'in'}&nbsp;</span><br><span class="highlight-pink">  &nbsp;{$lang=='es'?'CONTACTO':'TOUCH'}...</span></h1>
              
         </div>
-        <div class="col-sm-5 col-11 mt-5" >
+        <div class="col-lg-5 col-md-9 col-11 mt-5" >
             <form action="" class="contact-form px-4" on:submit={sendForm} data-aos="zoom-in" data-aos-duration="1500">
                 <input required name="email" type="email" class="form-control my-2 font-3" id="exampleFormControlInput1" placeholder="Email">
                 <textarea required name="message" class="form-control mt-3" id="exampleFormControlTextarea1" placeholder="{$lang=='es'?'Mensaje':'Message'}..." rows="8"></textarea>
@@ -53,7 +53,13 @@
     .contact-phone-l{top: 0; height: 50vh; max-height: 1000px; left: 10%;}
     .contact-phone-r{bottom: 0; height: 40vh; max-height: 500px; right: 0}
 
-    @media only screen and (max-width: 600px) {
+    @media (min-width: 768px) and (max-width: 1030px) {
+        .contact-page{min-height: 87vh; }
+        .contact-phone-r{height: 300px;}
+         .contact-phone-l{height: 400px;}
+    }
+
+    @media only screen and (max-width: 767px) {
         .contact-page{min-height: 87vh;}
          .contact-phone-r{height: 30vh;}
          .contact-phone-l{display: none;}

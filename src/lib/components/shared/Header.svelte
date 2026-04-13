@@ -106,7 +106,7 @@ $: path = $page.url.pathname;
     .is_open .line2 {stroke-dasharray: 1 60;stroke-dashoffset: -30;stroke-width: 6;}
     .is_open .line3 {stroke-dasharray: 90 207;stroke-dashoffset: -134;stroke-width: 6;}
     .lang-2{display: none;}
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 850px) {
     .menu, .socials{display: none}
     .menu-btn{display: block;}
     .menu-mobile{ width: 100%; position: relative; box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;}

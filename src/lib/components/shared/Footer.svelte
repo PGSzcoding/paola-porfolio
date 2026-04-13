@@ -2,7 +2,7 @@
     import { lang } from "$lib/stores/general";
 
 </script>
-<footer class="bg-yellow" data-aos="fade-up" data-aos-offset="0" data-aos-duration="1500">
+<footer class="bg-yellow" >
     <div class="footer pt-2">
         <a href="/"><img class="logo-img" src="/images/LOGO.png" alt=""></a>
     </div>

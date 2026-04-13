@@ -101,7 +101,7 @@ const filteredItems = $derived( activeFilter === '*'
     width: 100%;;height: 230px; object-fit: cover;
   }
 
-  .filters button {
+  .filters button {color:black;
     padding: 10px 25px;
     margin: 0 5px;
     background-color:#e5e2d8 ;
@@ -116,22 +116,15 @@ const filteredItems = $derived( activeFilter === '*'
     background-color: var(--pink);
   }
 
-
+  @media (min-width: 768px) and (max-width: 1000px) {
+    .grid li .cover-img {height: 200px; }
+    .grid > li {width: calc(100% /  2 - 30px);}
+  }
 
   @media (max-width: 767px) {
-    .filters button {
-      padding: 5px 10px;
-      margin: 5px;
-    }
-
-    .grid > li {
-      width: calc(100% /  2 - 30px);
-    }
-
-    .element-item p {
-      font-size: 16px;
-      line-height: 22px;
-    }
+    .filters button { padding: 5px 10px;margin: 5px;}
+    .grid > li {width: calc(100% /  2 - 30px);}
+    .element-item p { font-size: 16px;line-height: 22px;}
     .grid li .cover-img {height: 100px; }
     .element-item p{display: none;}
   }

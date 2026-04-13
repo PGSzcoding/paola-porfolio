@@ -27,13 +27,13 @@ afterNavigate(async () => {
     </div>
 
 
-    <div class="d-sm-block d-none">
+    <div class="d-lg-block d-none">
     <ScrollSections>
         <div slot="section1" id="about"> <AboutMeIndex about_me ={data.about_me}/> </div>
         <div slot="section2"><hr class="line-separator my-0" ><ProjectsIndex projects = {data.projects}/></div>
     </ScrollSections>
     </div>
-    <div class="d-block d-sm-none">
+    <div class="d-block d-lg-none">
     <div  id="about"> 
         <AboutMeIndex about_me ={data.about_me}/> 
     </div>

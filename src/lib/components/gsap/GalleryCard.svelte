@@ -4,7 +4,7 @@
 
     export let item
 </script>
-<a href="/projects/{item._id}">
+<a href="/proyectos/{item._id}">
     <div class="card-image" style="background-image:url({urlFor(item.cover).url()})"></div>
       
         <div class="card-content">
