@@ -23,19 +23,6 @@
         }
         tags = [...tags,{label:'Wordpress',value:'wordpress'}]
     }
- 
-  /*
-  const items = [
-    { category: 'cat-1', img: 'https://www.yudiz.com/codepen/animated-filter-tab/img-1.jpg' },
-    { category: 'cat-2', img: 'https://www.yudiz.com/codepen/animated-filter-tab/img-2.jpg' },
-    { category: 'cat-3', img: 'https://www.yudiz.com/codepen/animated-filter-tab/img-3.jpg' },
-    { category: 'cat-1', img: 'https://www.yudiz.com/codepen/animated-filter-tab/img-2.jpg' },
-    { category: 'cat-2', img: 'https://www.yudiz.com/codepen/animated-filter-tab/img-3.jpg' },
-    { category: 'cat-3', img: 'https://www.yudiz.com/codepen/animated-filter-tab/img-1.jpg' },
-    { category: 'cat-1', img: 'https://www.yudiz.com/codepen/animated-filter-tab/img-3.jpg' },
-    { category: 'cat-2', img: 'https://www.yudiz.com/codepen/animated-filter-tab/img-2.jpg' },
-    { category: 'cat-3', img: 'https://www.yudiz.com/codepen/animated-filter-tab/img-3.jpg' }
-  ];*/
 
 const filteredItems = $derived( activeFilter === '*'
     ? items
@@ -100,7 +87,7 @@ const filteredItems = $derived( activeFilter === '*'
   }
 .grid > li:hover{box-shadow: 0 20px 60px var(--yellow)}
   .element-item p{font-size: 16px; font-weight: 200; text-align: justify; line-height: 1.4;}
-  .filters {
+  .filters { color:black;
     margin-top: 40px;
     display: flex;
     flex-wrap: wrap;
@@ -138,12 +125,14 @@ const filteredItems = $derived( activeFilter === '*'
     }
 
     .grid > li {
-      width: calc(100% - 30px);
+      width: calc(100% /  2 - 30px);
     }
 
     .element-item p {
       font-size: 16px;
       line-height: 22px;
     }
+    .grid li .cover-img {height: 100px; }
+    .element-item p{display: none;}
   }
 </style>

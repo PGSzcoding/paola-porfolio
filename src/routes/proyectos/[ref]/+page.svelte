@@ -10,17 +10,17 @@
 </script>
 <section>
     {#if project}
-    <div class="row mx-0 mt-5 justify-content-center">
-        <div class="col-4">
+    <div class="row mx-0 mt-sm-5 mt-4 justify-content-center">
+        <div class="col-4 d-sm-block d-none">
             <div class="cover-container" data-aos="zoom-in">
                 <img class="cover" src="{urlFor(project.cover).url()}" alt="">
             </div>
         </div>
-        <div class="col-6">
+        <div class="col-sm-6 col-11">
             <div class="proyect-desc">
                 <h1 class="" data-aos="fade-right">{project.title}</h1>
                 {#if project.link_git || project.link_site}
-                <div class="d-flex mt-2">
+                <div class="d-flex mt-2 links-d">
                     {#if project.link_git}
                         <a href="{project.link_git}" title="go to git" target="_blank" class="btn btn-pink btn-link btn-sm"><i class="bi bi-github"></i></a>
                     {/if}
@@ -35,15 +35,15 @@
             </div>
         </div>
     </div>
-     <div data-aos="fade-in" class=" mt-4 text-center bg-yellow pb-5 pt-3">
+     <div data-aos="fade-in" class=" mt-sm-4 mt-5 text-center bg-yellow pb-5 pt-3">
         {#if $lang == 'es'}
             <h1 data-aos="zoom-in" class="title-g"><span class="font1">Vista</span> <span class="cursive1 cursive mx-2">del</span> <span class="highlight-blue">Proyecto</span></h1>
         {:else}
             <h1 data-aos="zoom-in" class="title-g"><span class="font1">See</span> <span class="cursive1 cursive mx-2">the</span> <span class="highlight-blue">Project</span></h1>
         {/if}
 
-        <div class="mb-4 mt-3 project-splide" data-aos="zoom-in">
-            <Splide aria-label="project gallery" options={{type   : 'loop',perPage: 3,focus  : 'center',arrows:false}}>
+        <div class="mb-4 mt-5 mt-sm-3 project-splide" data-aos="zoom-in">
+            <Splide aria-label="project gallery" options={{type   : 'loop',perPage: 3,focus  : 'center',arrows:false,breakpoints: {623: { perPage: 1}}}}>
                 {#each project.gallery  as img,i}
                     <SplideSlide>
                         <img class="img-gallery" src="{urlFor(img).url()}" alt="{project.title}{i}"/>
@@ -75,4 +75,11 @@
     .proyect-desc p{font-size: 1.2rem;}
 
     .img-gallery{max-width: 95%; object-fit: cover; height: 100%; border-radius: 15px;}
+
+    @media only screen and (max-width: 600px) {
+        .proyect-desc h1{text-align: center;}
+        .links-d{justify-content: center;}
+        .proyect-desc p{text-align: justify;line-height: 1.34;}
+         .title-g{font-size: 2.6rem;}
+     }
 </style>

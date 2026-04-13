@@ -49,7 +49,7 @@ button { background-color: transparent; border: none; cursor: pointer; outline: 
 
 h1, h2, h3, h4, h5, h6, p { margin: 0; }
 
-
+.headr{position: relative !important;}
 .highlight-yellow{background-color: var(--yellow); padding: .5rem;}
 .highlight-pink{background-color: var(--pink); padding: .5rem; }
 .highlight-blue{background-color: var(--blue); padding: .5rem;}
